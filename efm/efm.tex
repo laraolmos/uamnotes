@@ -143,7 +143,7 @@ pdfproducer={LaTeX, Lara Olmos Camarena} % PDF producer
 		\bibitem{Est} Apuntes del curso de \cur{Economía y Finanzas Matemáticas II}, 2016-2017, UAM. Profesor: Rafael Orive.
 		\bibitem{VicdeJuan} \cur{The Mathematics of Financial Derivatives: A Student Introduction}. Paul Wilmott, Sam Howison, Jeff Dewynne.
 		\href{https://books.google.nl/books?id=HAQgAwAAQBAJ&printsec=frontcover&hl=es#v=onepage&q&f=false}{Enlace}
-		\bibitem{probl} \cur{Mercado de Derivados Financieros: Futuros y Opciones}. Monografías de Juan Mascareñas sobre Finanzas Corporativas (UCM).
+		\bibitem{probl} Monografías de Juan Mascareñas sobre Finanzas Corporativas (UCM).
 \end{thebibliography}
 
 \vspace{5cm}
@@ -192,7 +192,7 @@ pdfproducer={LaTeX, Lara Olmos Camarena} % PDF producer
 
 	\subsection*{Finanzas}
 
-		Rama de la economía y administración de empresas que estudia el intercambio de distintos bienes de capital entre individuos, empresas o Estados y la incertidumbre y riesgos que estas activdades conllevan.
+		Rama de la economía y administración de empresas que estudia el intercambio de distintos bienes de capital entre individuos, empresas o Estados y la incertidumbre y riesgos que estas actividades conllevan.
 
 		Estudia la \n{obtención de capital para la inversión} en bienes productivos y de las decisiones de inversión de los ahorradores. También \n{la obtención y gestión} de fondos de capital que necesita una compañía, individuo o Estado para cumplir sus objetivos, y los criterios con que dispone sus activos.
 
@@ -463,10 +463,22 @@ pdfproducer={LaTeX, Lara Olmos Camarena} % PDF producer
 
 		\subsubsection{Duración}
 
-			Es una media ponderada de los vencimientos de los pagos por el valor actual relativo de los mismos. Dado un bono de precio:
-			\begin{center} \f{P = \sumatorio{i}{} c\sub{i}e\pot{-rt\sub{i}}} (continuo) o \f{P = \sumatorio{i}{} \frac{c\sub{i}}{(1+R)\pot{t\sub{i}}}} (compuesto) \end{center}
-			definimos su duración como:
-			\begin{center} \f{D = \frac{1}{P} \sumatorio{i}{} t\sub{i}c\sub{i}e\pot{-rt\sub{i}}} (continuo) o \f{D = \sumatorio{i}{} \frac{t\sub{i}c\sub{i}}{P(1+R)\pot{t\sub{i}}}} (compuesto) \end{center}
+			Es una media ponderada de los vencimientos de los pagos por el valor actual relativo de los mismos.
+
+			\begin{center}
+			\vspace{0.3cm}
+			\begin{tabular}{|c|c|c|}
+			\hline
+			Tipo de interés & Precio & Duración\\
+			\hline
+			Continuo & \f{P = \sumatorio{i = 1}{n} c\sub{i}e\pot{-rt\sub{i}} + Ne\pot{-rt\sub{n}}} & \f{D = \frac{1}{P} \sumatorio{i=1}{n} t\sub{i}c\sub{i}e\pot{-rt\sub{i}}} + N t\sub{n} e\pot{-rt\sub{n}}}  \\
+			\hline
+			Compuesto & \f{P = \sumatorio{i=1}{n} \frac{c\sub{i}}{(1+R)\pot{t\sub{i}}} + \frac{N}{(1+R)\pot{t\sub{n}}}} & \f{D = \sumatorio{i=1}{n} \frac{t\sub{i}c\sub{i}}{P(1+R)\pot{t\sub{i}}} + \frac{N}{P(1+R)\pot{t\sub{n}}}} \\
+			\hline
+			\end{tabular}
+			\end{center}
+
+			\vspace{0.3cm}
 
 			\n{Observación}. La duración de un bono cambia a lo largo de su vida. Para un bono cupón cero no.
 
@@ -484,10 +496,8 @@ pdfproducer={LaTeX, Lara Olmos Camarena} % PDF producer
 
 	\subsection{Swaps}
 
-		Un \n{swap} es un contrato entre dos partes que intercambian intereses sobre un cierto nominal hasta un cierto plazo: una parte paga intereses con un \n{tipo fijo}, la otra partes paga intereses según un tipo \n{variable} (Euribor). En principio, \n{no hay intercambio de nominales}.
-		No se negocia en mercados regulados.
-
-		Tipos:
+		Un \n{swap} es un contrato entre dos partes que intercambian intereses sobre un cierto nominal hasta un cierto plazo: una parte paga intereses con un \n{tipo fijo}, la otra parte paga intereses según un tipo \n{variable} (Euríbor). En principio, \n{no hay intercambio de nominales}.
+		No se negocia en mercados regulados. Tipos:
 		\begin{itemize}
 			\item Tipo de intereses (fijo o variable).
 			\item Divisas
@@ -668,7 +678,7 @@ pdfproducer={LaTeX, Lara Olmos Camarena} % PDF producer
 				\item Hay futuros para vencimientos de \f{2}, \f{5} años.
 			\end{itemize}
 
-			Los precios se cotizan en dólare sy treintaidosavos de dólar. Precio de la cotización de un bono es:\\
+			Los precios se cotizan en dólares y treintaidosavos de dólar. Precio de la cotización de un bono es:\\
 			\cur{P. bono en metálico = P. cotización B + Interés devengado}
 
 			Para la posición \n{corta} se ha de determinar: el \n{factor de conversión} (\f{f\sub{c}}) para definir el precio y el bono a entregar (el más barato).
@@ -692,7 +702,7 @@ pdfproducer={LaTeX, Lara Olmos Camarena} % PDF producer
 				\item Calcular la cotización del futuro a partir de la tesorería de la posición corta.
 			\end{enumerate}
 
-			\begin{center} \f{Cotizacion(F) = \frac{F - Interés acumulado}{f\sub{c}}} \end{center}
+			\begin{center} \f{Cotización(F) = \frac{F - Interés acumulado}{f\sub{c}}} \end{center}
 
 		\subsubsubsection{Coberturas con futuros}
 
@@ -943,7 +953,7 @@ pdfproducer={LaTeX, Lara Olmos Camarena} % PDF producer
 	\subsection{Teoría de las carteras}
 
 		\begin{itemize}
-			\item \n{Cartera (portafolio)}. Conjunto de todas las posiciones en todos los activos (largos o crotos) que tiene un individuo o institución.
+			\item \n{Cartera (portafolio)}. Conjunto de todas las posiciones en todos los activos (largos o cortos) que tiene un individuo o institución.
 			\item \n{Estrategia}, \f{\varphi}, consiste en la decisión de invertir en tiempo 0 en el activo \f{S\sub{i}} comprando \f{\varphi\sub{i}} unidades y esperar hasta el instante \f{1}. (\n{Modelo de un periodo}).
 			\item \n{Valor de la cartera} en \f{t = 0,1} es la variable aleatoria:
 			\begin{center} \f{V\sub{t} = \sumatorio{1}{d} \varphi\sub{i}S\sub{t}\pot{i} = \varphi S\sub{t}} \end{center}
@@ -1081,7 +1091,7 @@ pdfproducer={LaTeX, Lara Olmos Camarena} % PDF producer
 			\n{Proposición}. Sea \f{S\pot{n}} subyacente tal que \f{S\sub{1}\pot{n}(w\sub{j}) \neq 0} \f{\forall w\sub{j}\in \Omega}. Entonces \f{S\pot{n}} es un numerario.
 
 			\n{Teorema}. Sea una economía \n{completa y viable}. Sean \f{S\pot{n}} y \f{S\pot{m}} dos numerarios, \f{Q\sub{n},Q\sub{m}} las probabilideades martingalas asociadas. Entonces:
-			\begin{center} \f{S\sub{0}\pot{n} E\sub{Q\sub{n}}[S\sub{1}\pot{i}/S\sub{i}\pot{n}] = S\sub{0}\pot{m} E\sub{Q\sub{m}[S\sub{1}\pot{i}/S\sub{i}\pot{m}]}} \f{\forall i = 0,...,N} \end{center}
+			\begin{center} \f{S\sub{0}\pot{n} E\sub{Q\sub{n}}[S\sub{1}\pot{i}/S\sub{i}\pot{n}] = S\sub{0}\pot{m} E\sub{Q\sub{m}}[S\sub{1}\pot{i}/S\sub{i}\pot{m}]} \f{\forall i = 0,...,N} \end{center}
 
 		\subsubsection{Activos de Arrow-Debreu}
 
@@ -1097,26 +1107,162 @@ pdfproducer={LaTeX, Lara Olmos Camarena} % PDF producer
 			Esto permite calcular los \f{A\sub{0}\pot{i}}, la probabilidad martingala Q, las densidades entre probabilidades martingalas: 
 			\begin{center} \f{Q\sub{n}}, \f{Q\sub{m}} probabilidades \f{Z\sub{nm}(w\sub{j}) = \frac{Q\sub{n}(w\sub{j})}{Q\sub{m}(w\sub{j})}} \end{center}
 
-		\subsubsection{Valor de una opción de compra (call)}
-
-			Consideremos una economía con dos estados a vencimiento (subir, bajar) y dos activos (cuenta corriente con rendimiento r, acción \f{S = \{uS\sub{0},dS\sub{0}\}}). 
-
-			Es \n{economía completa y viable} si \f{d < 1+r < u}.
-
-			Una opción europea c de precio de ejercicio K con \f{dS\sub{0} < K < uS\sub{0}} tiene como precio y estrategia:
-			\begin{center} \f{c\sub{0} = \frac{(uS\sub{0} - K)(1+r-d)}{(1+r)(u-d)}} y \f{\varphi\pot{1}\sub{0} = \frac{uS\sub{0}-K}{(u-d)S\sub{0}}} \end{center}
-
 	\newpage
 
-	\section{Modelos binomiales}
+	\section{Modelo binomial}
 
+		El \n{modelo binomial} es un modelo discreto que permite observar el comportamiento de un activo (por ejemplo, acción) a través del tiempo. El precio de la acción puede comportarse de \n{dos} formas: subir o bajar en cada unidad de tiempo. Denotamos:
+		\begin{itemize}
+			\item \n{Precios} (consideramos modelo multiplicativo). En particular, para el modelo de un paso tenemos \f{S\sub{0}}, precio actual de la acción, \f{S\sub{1} = a S\sub{0}}, precio de la acción en el caso de subida y \f{S\sub{1} = b S\sub{0}}, precio de la acción en el caso de bajada. Consideramos (teóricamente) que \boldf{a > b} y \boldf{a b = 1}. En general, tenemos \f{N+1} precios, dados por: 
+			\begin{center} \f{ S\sub{n+1} = \left\{
+				\begin{aligned} 
+					& aS\sub{n} \text{   alza} \\
+					& bS\sub{n} \text{   baja} \\
+				\end{aligned}
+				}
+			\end{center}
+			\item \n{Probabilidades}. \f{p\sub{\alpha}} de subida y \f{1-p\sub{\alpha}} de bajada. Se considera para un inversor \f{\alpha \in \Lambda}.
+
+				\begin{figure}[h!]
+					\begin{center}
+					\includegraphics[width=8.5cm, height=6.5cm]{binomial.png}
+					\end{center}
+				\end{figure}
+			
+			\item \f{\omega} camino aleatorio del árbol. Hay \f{2\pot{N}} trayectorias posibles, \f{\Omega = \{\omega\sub{1},...,\omega\sub{2\pot{N}}\}}
+			\item \n{Número de subidas} hasta n, \f{Z\sub{n}(\omega)}, es una variable aleatoria que sigue una distribución binomial \f{B(n,p\sub{\alpha})}. \f{Z\sub{n}(\omega) = \sumatorio{i = 1}{n} Z\sub{i}} donde \f{Z\sub{i} = \left\{ \begin{aligned} 1 \text{ si hay subida en } t\sub{i}  \\ 0 \text{  si hay bajada en } t\sub{i} \end{aligned}}
+			\item \f{S\sub{n}(\omega)} para \f{n = 0,...,N}, precio del camino. \begin{center} \boldf{S\sub{n}(\omega) = S\sub{0} a\pot{Z\sub{n}(\omega)} b\pot{n-Z\sub{n}(\omega)}} \end{center}
+			\item La probabilidad de cada camino es: 
+			\begin{center} \f{P\sub{\alpha}(\omega) = p\sub{\alpha}\pot{Z\sub{N}(\omega)}(1-p\sub{\alpha})\pot{N-Z\sub{N}(\omega)}} \hspace{0.3cm} \f{\forall \omega \in \Omega} \end{center}
+			\item \n{Filtración}. \f{F\sub{n} = \sigma(S\sub{1},S\sub{2},...,S\sub{n})}. Es una sigma-álgebra del conjunto de posibles trayectorias, \f{\Omega}, (conjunto de subconjuntos de \f{\Omega}, cerrado por complementación, por uniones arbitrarias e intersecciones finitas). Representa también los precios posibles para los caminos aleatorios de un árbol de n pasos. Cumplen que \f{F\sub{i} \subseteq F\sub{i+1} \forall i = 0,...,N}. Por ejemplo, \f{F\sub{0} = \{\emptyset, \Omega\}}. \\ \f{F\sub{1} = \{\emptyset, \Omega, A, B\}} donde \f{A} denota el suceso \f{\{S\sub{1} = a S\sub{0}\}} y \f{B} denota \f{\{S\sub{1} = bS\sub{0}\}}. \\ \f{F\sub{2} = \{\emptyset, \Omega, A, B, AA, BB, AB, BA, BB\}}.
+			
+		\end{itemize}
+
+		\begin{multicols}{2}
+		\begin{itemize}
+			\item Los inversores coinciden en N-periodos y fechas de transacción.
+			\item Se pueden fraccionar los activos.
+			\item No se pagan dividendos, no hay costes de transacción ni impuestos.
+			\item Se permiten descubiertos ilimitados en \f{t}.
+		\end{itemize}
+		\end{multicols}
+
+		\subsection{Resultados}
+
+			\begin{itemize}
+				\item Un \n{activo replicable} es una variable aleatoria \f{F\sub{n}}-medible.
+				\item La dinámica del \n{activo sin riesgo} está caracterizada por su rendimiento. \begin{center} \f{S\sub{n}\pot{0} = (1+r)S\sub{n-1}\pot{0}} \f{\forall n = 1,...,N}, \f{S\sub{0}\pot{0} = 1}\end{center}
+				\item La \n{probabilidad de riesgo neutro} en un periodo es: 
+				\begin{center} \f{q = \frac{1+r-b}{a-b}}, \hspace{0.3cm} \f{1-q = \frac{a -1-r}{a-b}} \end{center}
+				\item La probabilidad de riesgo neutro del modelo binomial es:
+				\begin{center} \f{Q(\omega) = q\pot{Z\sub{N}(\omega)} (1-q)\pot{N-Z\sub{N}(\omega)}} \f{\forall \omega \in \Omega} \end{center}
+				\item Los precios descontados son una martingala.
+				\begin{center} \f{\frac{S\sub{m}}{(1+r)\pot{m}} = E\sub{Q}[\frac{S\sub{n}}{(1+r)\pot{n}}|F\sub{m}]} \f{\forall 0 \leq m < n \leq N} \end{center}
+				\item En particular, el \n{precio de un activo}:
+				\begin{center} \f{S\sub{0} = E\sub{Q}[\frac{S\sub{N}}{(1+r)\pot{N}}]} \end{center}
+				\item \n{Teorema}. La economía descrita por el modelo binomial es \n{completa}. %(Todos los activos son replicables).
+			\end{itemize}
+		
 		\subsection{Martingala}
+
+			Sea \f{(\Omega, F, P)} un espacio de probabilidad finito, \f{F\sub{0}, F\sub{1}, ..., F\sub{N}} álgebras de subconjuntos de F tal que: \f{F\sub{0} \subseteq F\sub{1} \subseteq ... \subseteq F\sub{N}} = F}, es filtración de F.
+
+			Una sucesión de variables aleatorias \f{S\sub{1},...,S\sub{n}} sobre \f{(\Omega, F, P)} se llama \n{martingala} respecto a \f{F\sub{0},F\sub{1},...,F\sub{N}} si \f{S\sub{n}} es \f{F\sub{n}}-medible y \f{E[X\sub{n+1}| F\sub{n}] = S\sub{n}}.
 
 		\subsection{Carteras autofinanciadas}
 
-		\subsection{Valor de una opción de compra europea (call)}
+			El inversor rebalancea su cartera en función de la economía en ese momento. Cada \n{estrategia} es un proceso estocástico: \boldf{\varphi\sub{n}(\omega) = (\varphi\pot{0}\sub{n}(\omega), \varphi\pot{1}\sub{n}(\omega))}, donde \f{\varphi\pot{i}\sub{n}(\omega)} es el número de unidades del activo \f{i} durante \f{(n,n+1]}. La redistribución viene dada por: \boldf{\varphi\sub{n+1} S\sub{n+1} = \varphi\sub{n}S\sub{n+1}}.
+
+			Dada una estrategia \f{\varphi}, \f{V\sub{n}(\varphi)} es el valor de la cartera en \f{n}, \f{n \leq N} y verifica
+
+			\begin{center} \f{V\sub{n+1}(\varphi) - V\sub{n}(\varphi) = \varphi\sub{n} (S\sub{n+1} - S\sub{n})} \hspace{0.3cm} \f{V\sub{n+1}(\varphi) = V\sub{0}(\varphi) + \sumatorio{j = 0}{n} \varphi\sub{j} (S\sub{j+1} - S\sub{j})} \end{center}
+
+			Sin arbitraje, el \n{valor de una cartera} cuyo flujo en N es \f{\varphi(S\sub{N})} viene dado por: \begin{center} \boldf{V\sub{0} = \frac{1}{(1+r)\pot{N}} E\sub{Q}[\varphi(S\sub{N})]} \end{center}
+ 		
+
+		\subsection{Valor de una opción de compra europea}
+
+			Una opción europea c de strike K con \f{aS\sub{0} < K < bS\sub{0}} tiene como precio y estrategia:
+
+			\begin{itemize}
+				\item Para el modelo de \f{1} paso:
+				\begin{center} \f{c\sub{0} = \frac{(aS\sub{0} - K)(1+r-b)}{(1+r)(a-b)}} y \f{\varphi\pot{1}\sub{0} = \frac{aS\sub{0}-K}{(a-b)S\sub{0}}} \end{center}
+
+				\item En general, dado una opción con flujo final \f{X = (S\sub{N} - K)\pot{+}}, \f{X(\omega) = max(S\sub{N}(\omega) \menos K, 0)}, el valor es:
+				\begin{center} \f{c\sub{0} = V\sub{0} = \frac{1}{(1+r)\pot{N}} E\sub{Q}[(S\sub{N}-K)\pot{+}] =} \\ \f{= \frac{1}{(1+r)\pot{N}} \sumatorio{n=0}{N} \left( \begin{matrix} N \\ n \end{matrix} \right) q\pot{n} (1-q)\pot{N-n} (S\sub{0}a\pot{n}b\pot{N-n} - K)\pot{+}} \end{center}
+			\end{itemize}
+
+			La ausencia de arbitraje nos da la \n{paridad call-put}: 
+			\begin{center} \f{c\sub{n} - p\sub{n} = S\sub{n} - K(1+r)\pot{n-N}} \end{center}
+			También podemos calcular el valor de un put, a partir del call.
+
+			\subsubsection{Derivación de las fórmulas del modelo de \f{1} paso (cartera réplica)}
+
+				Vamos a valorar una opción de compra europea formando una \n{cartera réplica} a partir del derivado y un activo libre de riesgo (cuenta bancaria), es decir, creando un activo gemelo que genere los mismos flujos de caja que el activo a valorar.
+
+				La cartera se compone de \f{h} acciones y de un préstamo de \f{B} euros a un tipo de interés libre de riesgo \f{r\sub{f}} (no tiene riesgo porque en todo momento habrá dinero para devolver el préstamo). Por tanto, dentro de un período los flujos de caja de dicha cartera son, dados los siguientes precios:
+
+				\begin{center}
+				\begin{tabular}{|c|c|c|c|}
+					\hline
+					& Actual & Subida & Bajada\\
+					\hline
+					Acción & \f{S\sub{0}} & \f{S\sub{a} = aS\sub{0}} & \f{S\sub{b} = bS\sub{0}}\\
+					\hline
+					Call & \f{c\sub{0}} & \f{c\sub{a} = max(S\sub{a} - K, 0)} & \f{c\sub{b} = max(S\sub{b} - K, 0)} \\
+					\hline
+					Flujos cartera & \f{S\sub{0}h - B} & \f{S\sub{a}h - (1+r\sub{f})B } & \f{S\sub{b}h - (1+r\sub{f})B} \\
+					\hline
+				\end{tabular}
+				\end{center}
+
+				Para que no haya \n{oportunidades de arbitraje}, el modelo considera: \f{c\sub{0} = S\sub{0}h - B}. Tenemos: \\ \f{c\sub{a} = S\sub{a} h - (1+r\sub{f})B} \hspace{0.3cm} \f{c\sub{b} = S\sub{b} h - (1+r\sub{f})B} \end{center}
+
+				Restando ambas ecuaciones se obtiene el ratio de cobertura, \f{h = \frac{c\sub{u} - c\sub{d}}{S\sub{0}} (a - b)}. \\ Tenemos que \f{B = \frac{S\sub{a}h - c\sub{a}}{1+r\sub{f}}}.
+
+				Sustituyendo los valores anteriores en la ecuación de \f{c\sub{0}} y considerando las \n{probabilidades neutrales de riesgo}: \f{q = \frac{1+r-b}{a-b}}, \f{1-q = \frac{a -1-r}{a-b}}, se llega a que el precio teórico de la opción de compra es igual al valor actual de la media ponderada de los flujos de caja que proporciona:
+				\begin{center} \f{c = \frac{c\sub{a}q + c\sub{b}(1-q)}{1+r\sub{f}}} \end{center}
+
+				\n{Observación}. Las \n{\cur{probabilidades} neutrales al riesgo} no son probabilidades formalmente, son los precios tiempo-estado de los posibles estados (subida-bajada) multiplicados por \f{1+r\sub{f}}. Pero ambas suman \f{1}, son positivas y se emplean para estimar el rendimiento esperado de un activo con riesgo que hacen que la prima de riesgo desaparezca.
+
+		\subsection{Arbitraje}
+				
+			El modelo binomial es libre de arbitraje (la economía es viable) si \f{0 < p\sub{\alpha} < 1} y \boldf{b < 1 + r < a}.
 
 
+		\subsection{Ajustes del árbol a datos del mercado}
+
+			Sea \f{T} tiempo hasta vencimiento, \f{\Delta t} tiempo entre dos nodos y \f{r\sub{c}} el tipo libre de riesgo anual (con composición continua). Tenemos:
+			\begin{center} \f{e\pot{r\sub{c}} = 1 + r \ent r \approx r\sub{c}\Delta t} \end{center}
+
+			La \n{probabilidad de riesgo neutro} verifica: \f{q = \frac{e\pot{r\sub{c}\Delta t} - b}{a-b}}.
+
+			La \n{volatilidad} de un activo, \f{\sigma}, verifica que, para un \f{\Delta t} pequeño, la desviación típica de sus rendimientos es \f{\sigma\sqrt{\Delta t}}.
+
+			El marco natural para el rendimiento relativo \f{\hat{R} = S\sub{n+1}/S\sub{n}}. Se verifica: 
+				\begin{center} \f{e\pot{r\sub{c}\Delta t} = E\sub{Q}[\hat{R}] = aq + b(1-q)} \\ \f{\sigma\pot{2} \Delta t = V\sub{Q}[\hat{R}] = a\pot{2}q + b\pot{2}(1-q) - e\pot{2r\sub{c}\Delta t}} \end{center}
+
+			Tenemos dos ecuaciones con tres incógnitas (\f{a,b,q}). Existen distintas aproximaciones:
+			\begin{itemize}
+				\item \n{Cox-Russ-Rubinstein}. Para \f{ab = 1}, \f{a = e\pot{\sigma\sqrt{\Delta t}}}, \f{b = e\pot{-\sigma \sqrt{\Delta t}}}.
+				\item \n{Jarrod-Rudd}, \f{q = 0.5}. \f{a = e\pot{(r\sub{c}-\frac{\sigma\pot{2}}{2}) \Delta t} e\pot{\sigma \sqrt{\Delta t}}}, \f{b = e\pot{(r\sub{c}-\frac{\sigma\pot{2}}{2}) \Delta t} e\pot{-\sigma \sqrt{\Delta t}}}.
+				\item \n{Tian}. Añadimos la ecuación de los momentos de orden \f{3} que hace coincidir el modelo binomial con el modelo continuo: \f{a\pot{3}q + b\pot{3}(1-q) = e\pot{3r\sub{c}\Delta t} e\pot{3\sigma\pot{2} \Delta t}}.
+				Entonces, 
+				\begin{center} \f{q = \frac{(e\pot{r\sub{c}\Delta t} - b)}{(a-b)}} \\ \f{a = \frac{e\pot{(r\sub{c}+\sigma\pot{2})\Delta t}}{2} [e\pot{\sigma\pot{2} \Delta t} + 1 + \sqrt{e\pot{2\sigma\pot{2}\Delta t} + 2 e\pot{\sigma\pot{2} \Delta t} - 3}]} \\
+				\f{b = \frac{e\pot{(r\sub{c}+\sigma\pot{2})\Delta t}}{2} [e\pot{\sigma\pot{2} \Delta t} + 1 - \sqrt{e\pot{2\sigma\pot{2}\Delta t} + 2 e\pot{\sigma\pot{2} \Delta t} - 3}]} \end{center}
+			\end{itemize}
+
+		\subsection{Fórmula de Cox-Rubinstein}
+
+				Valor de un call es: 
+				\begin{center} \f{c\sub{0} = S\sub{0} \phi(n\sub{0},N,q') - \frac{K}{(1+r)\pot{N}}\phi(n\sub{0},N,q)} \end{center}
+
+				donde \begin{center} \f{\varphi(n\sub{0},N,q) = P(X\geq n\sub{0})} donde \f{X \sim B(N,q)} \end{center}
+
+				y \f{n\sub{t} = [\frac{ln(K/(Sb\pot{N}))}{ln(a/b)}] + 1} y \f{q' = \frac{aq}{1+r}}.
+
+
+		
 \printindex
 
 \end{document}
